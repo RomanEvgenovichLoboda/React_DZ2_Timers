@@ -1,0 +1,32 @@
+.App {
+  background-color: rgb(216, 230, 11);
+  text-align: center;
+  padding: auto;
+  height: 100%;
+}
+
+.container{
+  margin: 50px;
+  width: 200px;
+  background-color: rgb(9, 94, 231);
+  color:yellow;
+  display:inline-block
+}
+time{
+  color: aliceblue;
+  margin-bottom: 50px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: large;
+  width: 100px;
+}
+.div__time{
+  color: aliceblue;
+  margin-bottom: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: large;
+  width: 40px;
+  display:inline-block
+}
+.bntsBlock{
+  background-color: aquamarine;
+};
