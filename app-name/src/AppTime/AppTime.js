@@ -3,20 +3,20 @@ import React, {useState, useEffect} from "react";
 
 const Timer = (props) =>{
 
-    const [[hr, min, sec,ms], setTime] = useState([props.hours, props.minutes, props.seconds, 1000]);
+    const [[hr, min, sec,ms], setTime] = useState([props.hours, props.minutes, props.seconds, 998]);
 
     const timerTick = () => {
-        if (hr <= 0 && min <= 0 && sec == 0){
-            setTime([0,0,0,0]);
+        if (hr <= 0 && min <= 0 && sec <= 0 && ms <= 0){
+            clearInterval(this);
         }
-        else if (min == 0 && sec == 0) {
-            setTime([hr - 1, 59, 59,1000]);
+        else if (min <= 0 && sec <= 0 && ms <= 0) {
+            setTime([hr - 1, 59, 59, 998]);
         }
-        else if (sec == 0) {
-            setTime([hr, min - 1, 59, 1000]);
+        else if (sec <= 0 && ms <= 0) {
+            setTime([hr, min - 1, 59, 998]);
         }
-        else if (ms == 0) {
-          setTime([hr, min, sec-1, 1000]);
+        else if (ms <= 0) {
+          setTime([hr, min, sec-1, 998]);
       }
         else {
             setTime([hr, min, sec, ms-2]);
